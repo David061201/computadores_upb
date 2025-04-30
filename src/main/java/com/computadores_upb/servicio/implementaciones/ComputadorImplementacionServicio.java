@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ComputadorImplementacionServicio implements ComputadorServicio {
+public class ComputadorImplementacionServicio implements ComputadorServiciol {
 
     private final ComputadorRepositorio computadorRepositorio;
 
