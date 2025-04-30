@@ -2,7 +2,7 @@ package com.computadores_upb.controlador;
 
 
 import com.computadores_upb.modelo.entidades.Computador;
-import com.computadores_upb.servicio.implementaciones.ComputadorServicio;
+import com.computadores_upb.servicio.ComputadorServicio;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,6 +24,7 @@ public class ComputadorControlador {
 
     @GetMapping("/computadorManual")
     public List<Computador> getComputadorManual(){
+
         return computadorServicio.getTodasComputadorManual();
     }
 

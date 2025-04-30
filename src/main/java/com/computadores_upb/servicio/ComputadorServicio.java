@@ -1,4 +1,4 @@
-package com.computadores_upb.servicio.implementaciones;
+package com.computadores_upb.servicio;
 
 import com.computadores_upb.modelo.entidades.Computador;
 
