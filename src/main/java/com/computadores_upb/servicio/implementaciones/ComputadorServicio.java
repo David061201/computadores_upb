@@ -1,0 +1,13 @@
+package com.computadores_upb.servicio.implementaciones;
+
+import com.computadores_upb.modelo.entidades.Computador;
+
+import java.util.List;
+
+public interface ComputadorServicio {
+
+    List<Computador> getTodasComputador();
+
+    List<Computador> getTodasComputadorManual();
+
+}
