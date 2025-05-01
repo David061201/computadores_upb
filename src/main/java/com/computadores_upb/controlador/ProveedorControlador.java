@@ -22,7 +22,7 @@ public class ProveedorControlador {
         return proveedorServicio.getTodasProveedor();
     }
 
-    @GetMapping("/proveedoresManual")
+        @GetMapping("/proveedoresManual")
     public List<Proveedor> getProveedoresManual(){
         return proveedorServicio.getTodasProveedorManual();
     }
