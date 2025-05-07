@@ -10,7 +10,7 @@ public interface ProveedorRepositorio extends Repository<Proveedor, Long> {
 
     List<Proveedor> findAll();
 
-    @Query(value = "select * from proveedores",nativeQuery = true)
+    @Query(value = "select * from proveedores where ciudad = 'Medellin'",nativeQuery = true)
     List<Proveedor> traerTodo();
 
 }
