@@ -24,6 +24,7 @@ public class ProveedorControlador {
 
         @GetMapping("/proveedoresManual")
     public List<Proveedor> getProveedoresManual(){
+
         return proveedorServicio.getTodasProveedorManual();
     }
 }

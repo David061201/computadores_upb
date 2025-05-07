@@ -3,6 +3,7 @@ package com.computadores_upb.servicio.implementaciones;
 import com.computadores_upb.modelo.entidades.Computador;
 import com.computadores_upb.modelo.repositorios.ComputadorRepositorio;
 import com.computadores_upb.servicio.ComputadorServicio;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
