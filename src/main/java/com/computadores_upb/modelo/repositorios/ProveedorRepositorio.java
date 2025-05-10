@@ -1,16 +1,18 @@
 package com.computadores_upb.modelo.repositorios;
 
 import com.computadores_upb.modelo.entidades.Proveedor;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.Repository;
+import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface ProveedorRepositorio extends Repository<Proveedor, Long> {
+public interface ProveedorRepositorio extends JpaRepository<Proveedor, Long> {
 
-    List<Proveedor> findAll();
+    @Query(value = "select * from proveedores",nativeQuery = true)
+    List<Proveedor> getTodasProveedor();
 
-    @Query(value = "select * from proveedores where ciudad = 'Medellin'",nativeQuery = true)
-    List<Proveedor> traerTodo();
+    @Query(value = "select * from proveedores where id=:id",nativeQuery = true)
+    Proveedor traerUnProveedorporId(@Param("id") Long id);
 
 }

@@ -3,7 +3,9 @@ package com.computadores_upb.controlador;
 
 import com.computadores_upb.modelo.entidades.Proveedor;
 import com.computadores_upb.servicio.ProveedorServicio;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -18,13 +20,14 @@ public class ProveedorControlador {
     }
 
     @GetMapping("/proveedores")
-    public List<Proveedor> getProveedores(){
-        return proveedorServicio.getTodasProveedor();
+    public ResponseEntity<List<Proveedor>> getProveedores(){
+        List<Proveedor> listaproveedor = proveedorServicio.getTodasProveedor();
+        return ResponseEntity.ok(listaproveedor);
     }
 
-        @GetMapping("/proveedoresManual")
-    public List<Proveedor> getProveedoresManual(){
-
-        return proveedorServicio.getTodasProveedorManual();
+    @GetMapping("/proveedoresManual/{id}")
+    public ResponseEntity<Proveedor> getProveedoresManual(@PathVariable("id")Long id){
+        Proveedor proveedor = proveedorServicio.traerUnProveedorporId(id);
+        return ResponseEntity.ok(proveedor);
     }
 }

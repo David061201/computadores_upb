@@ -20,12 +20,12 @@ public class ProveedorImplementacionServicio implements ProveedorServicio {
     @Override
     public List<Proveedor> getTodasProveedor(){
 
-        return proveedorRepositorio.findAll();
+        return proveedorRepositorio.getTodasProveedor();
     }
 
     @Override
-    public List<Proveedor> getTodasProveedorManual(){
+    public Proveedor traerUnProveedorporId(Long id){
 
-        return proveedorRepositorio.traerTodo();
+        return proveedorRepositorio.traerUnProveedorporId(id);
     }
 }

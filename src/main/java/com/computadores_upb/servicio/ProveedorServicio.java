@@ -7,6 +7,6 @@ import java.util.List;
 public interface ProveedorServicio {
     List<Proveedor> getTodasProveedor();
 
-    List<Proveedor> getTodasProveedorManual();
+    Proveedor traerUnProveedorporId(Long id);
 
 }

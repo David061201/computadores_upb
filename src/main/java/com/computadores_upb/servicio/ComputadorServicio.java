@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface ComputadorServicio {
 
-    List<Computador> getTodasComputador();
+    List<Computador> traerTodosComputador();
 
-    List<Computador> getTodasComputadorManual();
+    Computador traerUnComputadorporId(Long id);
 
 }

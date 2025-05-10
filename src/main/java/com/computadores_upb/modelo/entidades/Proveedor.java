@@ -16,10 +16,10 @@ import lombok.Setter;
 public class Proveedor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    String nombre_proveedor;
-    String telefono_proveedor;
-    String correo;
-    String ciudad;
+    private Long id;
+    private String nombre_proveedor;
+    private String telefono_proveedor;
+    private String correo;
+    private String ciudad;
 
 }

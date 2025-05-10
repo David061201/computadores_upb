@@ -14,14 +14,15 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Computador {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    String marca;
-    String procesador;
-    String ram_gb;
-    String almacenamiento_gb;
-    Integer precio;
-    Long fk_id_proveedores;
+    private Long id;
+    private String marca;
+    private String procesador;
+    private String ram_gb;
+    private String almacenamiento_gb;
+    private Integer precio;
+    private Long fk_id_proveedores;
 
 }
